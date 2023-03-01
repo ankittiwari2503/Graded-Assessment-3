@@ -25,7 +25,7 @@ pipeline {
     stage('Deploy in Docker') {
       steps {
         script {
-          sh 'docker container run -itd -p 3000:3000 437189082902.dkr.ecr.us-east-1.amazonaws.com/final_assignment:${BUILD_NUMBER}'
+          sh 'docker container run -itd -p 8081:8081 437189082902.dkr.ecr.us-east-1.amazonaws.com/final_assignment:${BUILD_NUMBER}'
         }
 
       }
