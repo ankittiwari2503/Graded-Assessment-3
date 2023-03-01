@@ -31,4 +31,11 @@ pipeline {
       }
     }
 }
+  post {
+    always {
+      deleteDir()
+      sh 'sudo docker rmi 437189082902.dkr.ecr.us-east-1.amazonaws.com/final_assignment:${BUILD_NUMBER}'
+    }
+
+  }
 }
